@@ -96,9 +96,17 @@ img {
   display: flex;
   gap: 40px;
   position: relative;
+  color: var(--hightlight-color);
+  transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* 
+.header-link {
+  position: relative;
+  color: var(--hightlight-color);
+  transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
 
-.header-link:hover:after{
+.header-link:after{
   content: '';
   width: 100%;
   height: 4px;
@@ -116,7 +124,7 @@ img {
   background-color: var(--hightlight-color);
   border-radius: 2px;
   position: absolute;
-  top: 45px;
+  bottom: -1px;
   left: 0;
 }
 
@@ -255,8 +263,9 @@ img {
   margin-top: 48px;
   border-radius: 4px;
   transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function:var(--transition-timing);
+  /* transition-duration: 250ms;
+  transition-timing-function:var(--transition-timing); */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .hero-btn:hover {
@@ -380,8 +389,9 @@ img {
   border-radius: 50%;
   background-color: var(--header-title-color);
   transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function:var(--transition-timing);
+  /* transition-duration: 250ms;
+  transition-timing-function:var(--transition-timing); */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .team-icon-link:hover {
@@ -430,8 +440,9 @@ img {
   justify-content: center;
   color: #8e8f99;
   transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function:var(--transition-timing);
+  /* transition-duration: 250ms;
+  transition-timing-function:var(--transition-timing); */
+  transition:border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover {
@@ -505,8 +516,9 @@ img {
   border-radius: 50%;
   background-color: var(--header-title-color);
   transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function:var(--transition-timing);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+  /* transition-duration: 250ms;
+  transition-timing-function:var(--transition-timing); */
 }
 
 .footer-icon-link:hover {
@@ -552,8 +564,9 @@ img {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function:var(--transition-timing);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); ;
+  /* transition-duration: 250ms;
+  transition-timing-function:var(--transition-timing); */
 }
 
 .navigation-btn:hover {
@@ -613,6 +626,7 @@ img {
 
 .images-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .images-link:hover {
@@ -621,6 +635,7 @@ img {
 }
 
 .images-link:focus {
+  transform: translateY(0%);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -654,7 +669,7 @@ img {
   height: 100%;
   background-color:rgba(46, 47, 66, 0.4);;
   top: 0;
-  transition: opacity 250ms linear, visibility 250ms linear;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -662,10 +677,11 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
   width: 408px;
   min-height: 584px;
   border-radius: 4px;
+  box-shadow: зі значенням 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color:  #FCFCFC;
   padding: 24px;
 }
@@ -675,6 +691,9 @@ img {
 }
 
 .modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
   background-color:#E7E9FC;
@@ -685,26 +704,36 @@ img {
   justify-content: center;
   margin-left: auto;
   color:var(--first-background-color);
+  padding: 0;
+  cursor: pointer;
+  transition-property: trnsform;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .modal-close:hover {
   background-color: var(--hightlight-color);
   fill:#ffffff;
-  transition-property: transform;
+  border: none;
+  /* transition-property: transform;
   transition-duration: 250ms;
-  transition-timing-function:var(--transition-timing);
+  transition-timing-function:var(--transition-timing); */
 }
 
 .modal-close:focus {
   background-color: var(--hightlight-color);
   fill:#ffffff;
-  transition-property: transform;
+  border: none;
+  /* transition-property: transform;
   transition-duration: 250ms;
-  transition-timing-function:var(--transition-timing);
+  transition-timing-function:var(--transition-timing); */
+}
+
+.modal-close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
-  visibility: none;
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
