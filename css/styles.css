@@ -113,8 +113,8 @@ img {
   background-color: var(--hightlight-color);
   border-radius: 2px;
   position: absolute;
-  top: 45px;
   left: 0;
+  bottom: -1px;
 }
 
 .header-link:focus:after{
@@ -128,13 +128,11 @@ img {
   left: 0;
 }
 
-
-.header-item {
-  position: relative;
-}
-
 .header-link {
   padding: 24px 0 24px;
+  position: relative;
+  color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-address {
@@ -185,8 +183,9 @@ img {
   letter-spacing: 0.02em;
   color: var(--title-color);
   transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function:var(--transition-timing);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition-duration: 250ms;
+  transition-timing-function:var(--transition-timing); */
 }
 
 .header-link:hover {
@@ -202,6 +201,8 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--second-text-color);
+  transition-property: transform;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .header-address {
@@ -621,8 +622,12 @@ img {
 
 .images-item:hover .images-text {
   transform: translateY(0);
-
 }
+
+.images-item:focus .images-text {
+  transform: translateY(0);
+}
+
 
 .images-link {
   display: block;
@@ -681,7 +686,7 @@ img {
   width: 408px;
   min-height: 584px;
   border-radius: 4px;
-  box-shadow: зі значенням 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color:  #FCFCFC;
   padding: 24px;
 }
