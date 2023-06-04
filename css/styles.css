@@ -622,11 +622,11 @@ img {
   width: calc((100% - 48px) / 3);
 }
 
-.images-item:hover .images-text {
+.images-link:hover .images-text {
   transform: translateY(0%);
 }
 
-.images-item:focus .images-text {
+.images-link:focus .images-text {
   transform: translateY(0%);
 }
 
