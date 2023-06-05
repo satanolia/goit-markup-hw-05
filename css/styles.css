@@ -118,7 +118,7 @@ img {
 }
 
 .header-link.current  {
-  background-color: var(--hightlight-color);
+  color: var(--hightlight-color);
 }
 
 .header-link:focus:after{
