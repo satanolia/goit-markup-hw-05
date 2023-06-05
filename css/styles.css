@@ -117,6 +117,10 @@ img {
   bottom: -1px;
 }
 
+.header-link.curent::after{
+  background-color: var(--hightlight-color);
+}
+
 .header-link:focus:after{
   content: '';
   width: 100%;
